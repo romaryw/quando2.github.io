@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CHAVE PIX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+
+<p style="text-align: center;"><strong>CHAVE PIX</strong></p>
+<p style="text-align: center;">Não precisa selecionar. Basta clicar bot&atilde;o para copiar a chave PIX, <br />depois vai no aplicativo do seu banco, na &aacute;rea pix e cole o c&oacute;digo.</p>
+
+<center>  
+    <!-- 1. Define some markup -->
+    <textarea id="bar">00020101021126580014br.gov.bcb.pix01362fc8fd02-fa45-4ff3-80a4-1c2f3439231b5204000053039865802BR5907LIVEPIX6009SAO PAULO62090505canal6304D888</textarea>
+<br></br>    
+    <button id="btn">
+      Copiar chave PIX
+    </button>
+
+    <!-- 2. Include library -->
+    <script src="../dist/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard -->
+    <script>
+      var btn = document.querySelector('#btn');
+
+      btn.addEventListener('click', () => {
+        const textCopied = ClipboardJS.copy(document.querySelector('#bar'));
+        console.log('copied!', textCopied);
+      })
+    </script>
+
+<style>
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+select,
+textarea { background:#FFF; border:1px solid #999; border-radius:5px; font-size:1.1em; margin:0 0 20px 0; padding:8px 5px; width:10%; }
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button { background:#008B00; color:#FFF; border:1px solid #2F4F4F; border-radius:5px; font-size:1.1em; margin:0 2px 2px 0; padding:8px 20px; cursor:pointer; transition:all 200ms linear; width:50% }
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+button:hover { background:#228B22; color:#FFF; }
+</style>
+    
+  </body>
+</html>
